@@ -412,3 +412,12 @@ f(x) =
 - 期刊 [编号] 作者，论文名，杂志名，卷期号：起止页码，出版年。
 - 网上资源 [编号] 作者，资源标题，网址，访问时间（年月日）。
 
+## 插入代码块
+
+```latex{.line-numbers}
+\begin{lstlisting}[language=,caption=] %language指定代码的语言类型,caption为该代码块的标题
+你想显示的代码
+\end{lstlisting}
+
+\lstinputlisting[language=, firstline=, lastline=,caption=]{source} %直接从文件中引入代码,firstline和lastline为从该文件中引入代码的起止行
+```
