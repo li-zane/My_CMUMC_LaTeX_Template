@@ -1,0 +1,2 @@
+# My_CMUMC_LaTeX_Template
+数学建模国赛的自用latex模板
