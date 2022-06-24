@@ -1,0 +1,8 @@
+# 忽略latex编译生成文档
+*.aux
+*.log
+*.lol
+*.out
+*.pdf
+*.toc
+*.synctex.gz

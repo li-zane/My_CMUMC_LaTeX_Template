@@ -1,0 +1,77 @@
+\documentclass{cumcmthesis}
+    %指定使用该模板, 需将cumcmthesis.cls文件于tex文件置于同一目录下
+    %  可选参数:
+    %       - withoutpreface:提交电子版时,无需承诺书和封面
+    %       - bwprint:黑白打印,默认为colorprint
+
+\title{论文题目}
+\tihao{A}            % 题号
+\baominghao{4321}    % 报名号
+\schoolname{你的大学}
+\membera{成员A}
+\memberb{成员B}
+\memberc{成员C}
+\supervisor{指导老师}
+\yearinput{2017}     % 年
+\monthinput{08}      % 月
+\dayinput{22}        % 日
+
+\begin{document}
+
+\maketitle % 承诺书与封面页
+
+% 可根据个人需求,修改文章主体    
+
+% 摘要
+\begin{abstract}
+
+    摘要的具体内容。
+    \keywords{关键词1\quad  关键词2\quad   关键词3}
+
+\end{abstract}
+
+\tableofcontents %目录, 不需要目录时, 注释掉即可
+
+\section{问题重述}
+
+    \subsection{问题背景}
+
+    \subsection{目标任务}
+
+\subsection{问题分析}
+
+\section{模型假设}
+
+\section{符号说明}
+
+    \begin{center}
+        \begin{tabular}{cc}
+            \hline
+            \makebox[0.3\textwidth][c]{符号}	&  \makebox[0.4\textwidth][c]{意义} \\ 
+            \hline
+            D	    & 木条宽度（cm） \\ 
+            \hline
+        \end{tabular}
+    \end{center}
+
+\section{模型的建立与求解}
+
+\section{灵敏度分析}
+
+\section{模型的评价与推广}
+
+% 参考文献
+\begin{thebibliography}{99}%宽度99
+
+    \bibitem{bib:one} ....
+
+\end{thebibliography}
+
+% 附录
+\begin{appendices}
+
+    附录的内容。
+
+\end{appendices}
+
+\end{document}
