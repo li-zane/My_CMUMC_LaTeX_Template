@@ -76,10 +76,10 @@
 
 \end{thebibliography}
 
-% 附录
+% 附录 % 在appendices环境中，用\section{XX}后，显示的是 附录A XX
 \begin{appendices}
 
-    附录的内容。
+    附录的内容。 
 
 \end{appendices}
 
