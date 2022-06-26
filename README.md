@@ -129,89 +129,90 @@ latexmk -xelatex example
 ```latex{.line-numbers}
 
 % 单张图片
-\begin{figure}[! H]
-
+\begin{figure}[!h]
 	\centering
-	\includegraphics[width=0.6\textwidth]{file name}
-	\caption{picture name}
-	\label{my label}
-
+	\includegraphics[width=0.6\textwidth]{}
+	\caption{}
+	\label{}
 \end{figure}
 
 % 插入单张过宽图片
-\begin{figure}[H]
-
+\begin{figure}[!h]
 	\centering
-	\includegraphics[width=0.6\textwidth][center]{file name}
-	\caption{picture name}
-	\label{my label}%%后文用\ref{my label}引用
-
+	\includegraphics[width=0.6\textwidth][center]{}
+	\caption{}
+	\label{}
 \end{figure}
 
 % 插入两张图片并并排
-\begin{figure}[! H]
-
+\begin{figure}[!h]
 	\centering
+
 	\begin{minipage}[c]{0.48\textwidth}
 		\centering
-		\includegraphics[width=0.8\textwidth]{file name}
-		\subcaption{picture name}
+		\includegraphics[width=0.8\textwidth]{}
+		\subcaption{}
         \label{}
 	\end{minipage}
+
 	\begin{minipage}[c]{0.48\textwidth}
 		\centering
-		\includegraphics[width=0.8\textwidth]{file name}
-		\subcaption{picture name}
+		\includegraphics[width=0.8\textwidth]{}
+		\subcaption{}
         \label{}
 	\end{minipage}
+
     \caption{}
     \label{}
-
 \end{figure}
 
 % 插入三张图片并排显示
-\begin{figure}[! H]
-
+\begin{figure}[!h]
 	\centering
+    
 	\begin{minipage}[c]{0.3\textwidth}
 		\centering
-		\includegraphics[width=0.95\textwidth]{file name}
-		\subcaption{picture name}
+		\includegraphics[width=0.95\textwidth]{}
+		\subcaption{}
         \label{}
 	\end{minipage}
+
 	\begin{minipage}[c]{0.3\textwidth}
 		\centering
-		\includegraphics[width=0.95\textwidth]{file name}
-		\subcaption{picture name}
+		\includegraphics[width=0.95\textwidth]{}
+		\subcaption{}
         \label{}
 	\end{minipage}
+
 	\begin{minipage}[c]{0.3\textwidth}
 		\centering
-		\includegraphics[width=0.95\textwidth]{file name}
-		\subcaption{picture name}
+		\includegraphics[width=0.95\textwidth]{}
+		\subcaption{}
         \label{}
 	\end{minipage}
+
     \caption{}
     \label{}
-
 \end{figure}
 
 % 并排插入两个不同高的图片
-\begin{figure}[! H]
-
+\begin{figure}[!h]
     \centering
-    \begin{minipage}[c]{0.48\textwidth}
-        \centering
-        \includegraphics[height=0.2\textheight]{file name}
-        \subcaption{}
-    \end{minipage}
-    \begin{minipage}[c]{0.48\textwidth}
-        \centering
-        \includegraphics[height=0.2\textheight]{file name}
-        \subcaption{}
-    \end{minipage}
-    \caption{多图并排示例}
 
+    \begin{minipage}[c]{0.48\textwidth}
+        \centering
+        \includegraphics[height=0.2\textheight]{}
+        \subcaption{}
+    \end{minipage}
+
+    \begin{minipage}[c]{0.48\textwidth}
+        \centering
+        \includegraphics[height=0.2\textheight]{}
+        \subcaption{}
+    \end{minipage}
+
+    \caption{}
+    \label{}
 \end{figure}
 
 ```
@@ -222,7 +223,7 @@ latexmk -xelatex example
 
 三线表:
 ```latex{.line-numbers}
-\begin{table}[!htbp]
+\begin{table}[!]
     \centering
     \caption{中文标题}
     \label{}
@@ -248,11 +249,11 @@ latexmk -xelatex example
 ```latex{.line-numbers}
 \begin{center}
     \begin{tabularx}{\textwidth}{XX}
-        \hline
+        \toprule[1.5pt]
         符号	&  \textbf{意义} \\ 
-        \hline
-        D	    & 木条宽度（cm） \\ 
-        \hline
+        \midrule[1pt]
+        	    &  \\ 
+        \bottomrule[1.5pt]
     \end{tabularx}
 \end{center}
 ```
@@ -390,7 +391,11 @@ f(x) =
 
 在引入**enumitem**宏包时,添加可选参数`[shortlabels]`,后面修改列表编号时,可以像**enumerate**宏包一样简便地修改:
 ```latex
-\begin{enumerate}
+\begin{enumerate}[(1)]
+    \item 1
+    \item 2
+\end{enumerate}
+```
 
 ## 字体加粗与斜体
 用`\textbf{}`对文本进行加粗,`\textbf{}`对文本进行斜体
@@ -400,10 +405,10 @@ f(x) =
 ## 文献引用
 ```latex
 \begin{thebibliography}{99}
-    \bibitem[1] ...
+    \bibitem[1]{引用标签} ...
 \end{thebibliography}
 ```
-在文中用`\cite{1}`即可引用,若要使参考文献标号在右上角,则用`\upcite`或`\supercite`[^1]引用
+在文中用`\cite{引用标签}`即可引用,若要使参考文献标号在右上角,则用`\upcite`或`\supercite`[^1]引用
 
 [^1]:使用`\supercite`的标号更小
 
