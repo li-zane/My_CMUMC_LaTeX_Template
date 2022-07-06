@@ -241,13 +241,14 @@ latexmk -xelatex example
 ```latex{.line-numbers}
 \begin{table}[!h]
     \centering
-    \caption{中文标题}
+    \caption{}
     \label{}
+    %\setlength\tabcolsep{60pt} %修改最左边一列到边栏的间距
     \begin{tabularx}{\textwidth}{XX}
         \toprule[1.5pt]
-        A & B\\
+        \\
         \midrule[1pt]
-        1 & 2\\
+        \\
         \bottomrule[1.5pt]
     \end{tabularx}
 \end{table}

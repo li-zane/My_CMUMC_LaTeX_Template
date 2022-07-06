@@ -43,6 +43,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \geometry{a4paper,top=25mm,bottom=25mm,left=25mm,right=25mm}
 % 数学宏包
 \RequirePackage{amsmath}
+\RequirePackage{amsthm}
 \RequirePackage{amsfonts}
 \RequirePackage{amssymb}
 \RequirePackage{bm}
@@ -176,6 +177,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 	\abovedisplayshortskip \z@ \@plus3\p@
 	\belowdisplayshortskip 6.5\p@ \@plus3.5\p@ \@minus3\p@}
 % 数学环境, 定理等设置
+\theoremstyle{definition}
 \newtheorem{definition}{\mcm@cap@definition}
 \newtheorem{theorem}{\mcm@cap@theorem}
 \newtheorem{lemma}{\mcm@cap@lemma}
