@@ -55,11 +55,11 @@
 
     \begin{center}
         \begin{tabular}{cc}
-            \hline
-            \makebox[0.3\textwidth][c]{符号}	&  \makebox[0.4\textwidth][c]{意义} \\ 
-            \hline
-            D	    & 木条宽度（cm） \\ 
-            \hline
+            \toprule[1.5pt]
+            符号	&  意义 \\ 
+            \midrule
+            	    &  \\ 
+            \bottomrule[1.5pt]
         \end{tabular}
     \end{center}
 
@@ -215,7 +215,7 @@ latexmk -xelatex example
 
 三线表:
 ```latex{.line-numbers}
-\begin{table}[!]
+\begin{table}[!h]
     \centering
     \caption{中文标题}
     \label{}
@@ -239,15 +239,18 @@ latexmk -xelatex example
 
 若要使表格与页面同宽,可用**tabularx宏包来实现**[^2],加上参数`{\textwidth}`,并将列的的类型改为`X`类型,它将表格的空余部分用空格填充:
 ```latex{.line-numbers}
-\begin{center}
+\begin{table}[!h]
+    \centering
+    \caption{中文标题}
+    \label{}
     \begin{tabularx}{\textwidth}{XX}
         \toprule[1.5pt]
-        符号	&  \textbf{意义} \\ 
+        A & B\\
         \midrule[1pt]
-        	    &  \\ 
+        1 & 2\\
         \bottomrule[1.5pt]
     \end{tabularx}
-\end{center}
+\end{table}
 ```
 [^2]:该模板已加载**tabularx宏包**
 ## 公式
@@ -314,7 +317,7 @@ f(x) =
 \]
 ```
 
-置于**case**环境之中, 用 `\\` 换行
+置于**case**环境之中, 用 `\\` 换行,用`&`来对齐位置
 
 ### 字体
 
