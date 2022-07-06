@@ -188,7 +188,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \newtheorem{principle}{\mcm@cap@principle}
 \newtheorem{problem}{\mcm@cap@problem}
 \newtheorem{example}{\mcm@cap@example}
-\newtheorem{proof}{\mcm@cap@proof}
+% \newtheorem{proof}{\mcm@cap@proof}
 \newtheorem{solution}{\mcm@cap@solution}
 
 % 浮动环境设置
