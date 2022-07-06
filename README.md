@@ -147,21 +147,18 @@ latexmk -xelatex example
 % 插入两张图片并并排
 \begin{figure}[!h]
 	\centering
-
+	\begin{minipage}[c]{0.48\textwidth}
+		\centering
+		\includegraphics[width=0.8\textwidth]{}
+		\subcaption{}
+        \label{}
+	\end{minipage} %中间不能有空格
 	\begin{minipage}[c]{0.48\textwidth}
 		\centering
 		\includegraphics[width=0.8\textwidth]{}
 		\subcaption{}
         \label{}
 	\end{minipage}
-
-	\begin{minipage}[c]{0.48\textwidth}
-		\centering
-		\includegraphics[width=0.8\textwidth]{}
-		\subcaption{}
-        \label{}
-	\end{minipage}
-
     \caption{}
     \label{}
 \end{figure}
@@ -169,28 +166,24 @@ latexmk -xelatex example
 % 插入三张图片并排显示
 \begin{figure}[!h]
 	\centering
-    
 	\begin{minipage}[c]{0.3\textwidth}
 		\centering
 		\includegraphics[width=0.95\textwidth]{}
 		\subcaption{}
         \label{}
 	\end{minipage}
-
 	\begin{minipage}[c]{0.3\textwidth}
 		\centering
 		\includegraphics[width=0.95\textwidth]{}
 		\subcaption{}
         \label{}
 	\end{minipage}
-
 	\begin{minipage}[c]{0.3\textwidth}
 		\centering
 		\includegraphics[width=0.95\textwidth]{}
 		\subcaption{}
         \label{}
 	\end{minipage}
-
     \caption{}
     \label{}
 \end{figure}
@@ -198,24 +191,23 @@ latexmk -xelatex example
 % 并排插入两个不同高的图片
 \begin{figure}[!h]
     \centering
-
     \begin{minipage}[c]{0.48\textwidth}
         \centering
         \includegraphics[height=0.2\textheight]{}
         \subcaption{}
     \end{minipage}
-
     \begin{minipage}[c]{0.48\textwidth}
         \centering
         \includegraphics[height=0.2\textheight]{}
         \subcaption{}
     \end{minipage}
-
     \caption{}
     \label{}
 \end{figure}
 
 ```
+
+注意:并排图片,不同的minipage之间不能有空格.
 
 ## 表格
 
