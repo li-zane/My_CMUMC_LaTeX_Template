@@ -78,6 +78,8 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 % 参考文献的包
 % \RequirePackage{bibentry}
 % \RequirePackage{natbib}
+%单位
+\RequirePackage{siunitx}
 
 % 字图与子标题
 \RequirePackage{subcaption}
